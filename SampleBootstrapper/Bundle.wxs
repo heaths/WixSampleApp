@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+  <Bundle Name="Sample Bootstrapper" Version="1.0.0.0" Manufacturer="Heath Stewart" UpgradeCode="a6f39b58-0d32-4864-aee7-3aa1ddfea842">
+    <!-- See https://wixtoolset.org/documentation/manual/v3/bundle/wixstdba/ for a list of WiX standard bootstrapper types. -->
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+      <bal:WixStandardBootstrapperApplication LicenseFile="$(sys.SOURCEFILEDIR)..\LICENSE.rtf" LogoFile="Logo.png" />
+    </BootstrapperApplicationRef>
+
+    <Chain>
+      <MsiPackage SourceFile="$(var.SampleProduct.TargetPath)" Compressed="yes" />
+    </Chain>
+  </Bundle>
+</Wix>
