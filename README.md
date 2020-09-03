@@ -2,6 +2,7 @@
 
 This is a simple sample for a [Windows Installer XML](https://wixtoolset.org) project using minimal authoring to create a Windows Installer package (.msi file).
 
+
 It contains:
 
 1. **SampleApp** - a simple console application.
